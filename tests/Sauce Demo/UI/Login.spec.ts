@@ -1,4 +1,3 @@
-import { append } from './Utils'
 import { test, expect } from '@playwright/test';
 
 test('Login Com Sucesso', async ({ page }, testInfo) => {
