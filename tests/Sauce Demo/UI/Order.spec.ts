@@ -1,4 +1,3 @@
-import { append } from './Utils'
 import { test, expect } from '@playwright/test';
 
 test('Finalizando ordem com sucesso', async ({ page }, testInfo) => {
@@ -31,9 +30,5 @@ test('Finalizando ordem com sucesso', async ({ page }, testInfo) => {
     
     // Checkout: Complete!
     await page.getByRole("button",{name: 'back-to-products'});
-    
-    
-
-
 
 });
