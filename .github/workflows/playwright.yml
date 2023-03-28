@@ -18,7 +18,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test --reporter=line,allure-playwright
+      run: npx playwright test --reporter=line,allure-playwright,html
     - name: Generate Allure Report
       run: npx allure generate ./allure-results --clean
     - uses: actions/upload-artifact@v3
@@ -34,17 +34,13 @@ jobs:
         path: allure-report/
         retention-days: 30
         
-  report:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
     - name: Setup Pages
       uses: actions/configure-pages@v2
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
         # Upload entire repository
-        path: allure-report/
+        path: ./allure-results
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1
