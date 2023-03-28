@@ -70,7 +70,7 @@ jobs:
         # GitHub repository owner
         github_repo_owner: ${{ github.repository_owner }}
         # Use a custom URL instead of *.github.io
-        report_url: .github.io
+        # report_url: .github.io
 
 
 
