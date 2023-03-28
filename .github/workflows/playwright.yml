@@ -72,6 +72,9 @@ jobs:
         # Use a custom URL instead of *.github.io
         # report_url: .github.io
 
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
 
 
 
