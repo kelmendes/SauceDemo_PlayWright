@@ -107,5 +107,13 @@ async function writeInReport(_reponse) {
     console.info("Response Head: \n")
     console.log(_reponse);
     console.info("\n Response Body: \n")
-    console.log(await _reponse.json());
+    try {  
+        console.log(await _reponse.json());
+    }
+    catch (e: unknown) { 
+        console.info(" null. \n")
+    }
+
+    
+
 }
