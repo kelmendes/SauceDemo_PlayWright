@@ -19,6 +19,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
   test:
+    needs: build
     runs-on: ubuntu-lates
     steps:
     - name: Run Playwright tests
@@ -39,6 +40,7 @@ jobs:
         retention-days: 30
         
   deploy:
+    needs: test
     runs-on: ubuntu-lates
     steps:
     - name: Setup Pages
