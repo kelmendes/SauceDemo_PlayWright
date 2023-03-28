@@ -31,27 +31,14 @@ jobs:
       if: always()
       with:
         name: allure-report
-        path: allure-report/
-        retention-days: 30
-    - name: allure-html-reporter-github-pages
-      # You may pin to the exact commit or the version.
-      # uses: PavanMudigonda/allure-html-reporter-github-pages@494af460cf5d0c0a0a4e48f800fc3fe48891cf21
-      uses: PavanMudigonda/allure-html-reporter-github-pages@v1.2
+   
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
       with:
-        # ALLURE RESULTS JSON FILE
-        ALLURE_RESULTS_JSON: ./
-        # Workflow File NAME
-        WORKFLOW_ID: 
-        token: ${{ github.token }}
-        test_env: QA
-        allure_results: allure-results
-        allure_report: allure-report
-        gh_pages: gh-pages
-        allure_history: allure-history
-        subfolder: # optional, default is 
-        keep_reports: 20
-        github_run_num: ${{ github.run_number }}
-        github_run_id:  ${{ github.run_id }}
-        github_repo:  ${{ github.repository }}
-        github_repo_owner:  ${{ github.repository_owner }}
-        report_url: # optional, default is 
+        # Upload entire repository
+        path: allure-report/
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
