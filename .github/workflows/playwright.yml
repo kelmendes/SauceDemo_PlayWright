@@ -19,7 +19,6 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test --reporter=line,allure-playwright
-      
     - name: Allure report
       uses: afiore/action-allure-report@v0.1.0
       with:
@@ -27,7 +26,6 @@ jobs:
         results-dir: allure-results
         # Allure report target dir
         report-dir: allure-report
-      
     - uses: actions/upload-artifact@v3
       if: always()
       with:
