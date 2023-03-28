@@ -31,7 +31,9 @@ jobs:
       if: always()
       with:
         name: allure-report
-   
+        path: allure-report/
+        retention-days: 30
+        
     - name: Setup Pages
       uses: actions/configure-pages@v2
     - name: Upload artifact
