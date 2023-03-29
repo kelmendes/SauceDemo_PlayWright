@@ -10,6 +10,8 @@ on:
         - info
         - warning
         - debug
+      tags:
+        description: 'Test scenario tags'  
   push:
     branches: [ main, master ]
   pull_request:
