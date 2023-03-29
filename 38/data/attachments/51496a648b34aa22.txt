@@ -1,0 +1,26 @@
+Response Head: 
+
+APIResponse: 200 OK
+  Date: Wed, 29 Mar 2023 13:41:35 GMT
+  Content-Type: application/json; charset=utf-8
+  Transfer-Encoding: chunked
+  Connection: close
+  X-Powered-By: Express
+  Access-Control-Allow-Origin: *
+  Etag: W/"50-RsYXlHxEn0K0mjFQ7QHQXrk1mxo"
+  Via: 1.1 vegur
+  CF-Cache-Status: DYNAMIC
+  Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HtIKDOFd1jZq2BFhlygv5X5KAnx7Z8x1fr16c22%2FFE2xS5palGR1evnuT3daHcwfIAkli7M3cHogul6B6UpD%2F4qcXRUNl0K4awSdAVmKPQcWMwnz%2BLIsR6UeFw%3D%3D"}],"group":"cf-nel","max_age":604800}
+  NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+  Vary: Accept-Encoding
+  Server: cloudflare
+  CF-RAY: 7af888016bf4e863-DFW
+  Content-Encoding: br
+
+ Response Body: 
+
+{
+  name: 'morpheus',
+  job: 'zion resident',
+  updatedAt: '2023-03-29T13:41:35.792Z'
+}
