@@ -6,12 +6,7 @@ on:
     branches: [ main, master ]
 jobs:
   test:
-    permissions:
-      pull-requests: write
-      issues: write
-      repository-projects: write
-      pages: write
-      id-token: write
+    permissions: read-all|write-all
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
