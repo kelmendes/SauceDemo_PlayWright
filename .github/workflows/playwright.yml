@@ -52,6 +52,9 @@ jobs:
         path: allure-report/
         retention-days: 30
         
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+        
     - name: Get Allure history
       uses: actions/checkout@v3
       if: always()
@@ -77,5 +80,9 @@ jobs:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
+      
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
 
 
