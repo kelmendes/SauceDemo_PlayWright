@@ -1,0 +1,25 @@
+Response Head: 
+
+APIResponse: 201 Created
+  Date: Wed, 29 Mar 2023 12:31:33 GMT
+  Content-Type: application/json; charset=utf-8
+  Content-Length: 85
+  Connection: close
+  X-Powered-By: Express
+  Access-Control-Allow-Origin: *
+  Etag: W/"55-AZNlO/hpk81pNaC24X2WHaxW7mM"
+  Via: 1.1 vegur
+  CF-Cache-Status: DYNAMIC
+  Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=B%2BQK%2BmTcucNAq%2B5yyw8Esv6pqsdJ9l979erQNNmoXCOwKKyOBSUGdCPdkckJCRguCTSOXwwFFCd%2BGu7z5N0gnPjs5UKwMH8i0jxik0q%2BnolSvsftHyiGgzFdYw%3D%3D"}],"group":"cf-nel","max_age":604800}
+  NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+  Server: cloudflare
+  CF-RAY: 7af8216a3a2d311f-LAX
+
+ Response Body: 
+
+{
+  name: 'ASDASDASD',
+  job: 'leader',
+  id: '440',
+  createdAt: '2023-03-29T12:31:33.727Z'
+}
