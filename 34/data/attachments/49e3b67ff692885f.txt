@@ -1,0 +1,36 @@
+Response Head: 
+
+APIResponse: 200 OK
+  Date: Wed, 29 Mar 2023 12:53:11 GMT
+  Content-Type: application/json; charset=utf-8
+  Transfer-Encoding: chunked
+  Connection: close
+  X-Powered-By: Express
+  Access-Control-Allow-Origin: *
+  Etag: W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"
+  Via: 1.1 vegur
+  Cache-Control: max-age=14400
+  CF-Cache-Status: HIT
+  Age: 3035
+  Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eUDn8pm%2B9JpM9KCuvYV89mk6PI%2FgP7Dp6P0ObiVZj0%2F5dZWP6KvT1ra6VNDgcR4bkQPzlwKzJTvxMHywRv5EcM6s4Pk8CIJ0ZEtNzP7RYAlVIR%2BPI1q3o5gAaQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+  NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+  Vary: Accept-Encoding
+  Server: cloudflare
+  CF-RAY: 7af84119ba792cdc-DFW
+  Content-Encoding: br
+
+ Response Body: 
+
+{
+  data: {
+    id: 2,
+    email: 'janet.weaver@reqres.in',
+    first_name: 'Janet',
+    last_name: 'Weaver',
+    avatar: 'https://reqres.in/img/faces/2-image.jpg'
+  },
+  support: {
+    url: 'https://reqres.in/#support-heading',
+    text: 'To keep ReqRes free, contributions towards server costs are appreciated!'
+  }
+}
