@@ -6,7 +6,7 @@ on:
     branches: [ main, master ]
 jobs:
   test:
-    permissions: read-all|write-all
+    permissions: write-all
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
