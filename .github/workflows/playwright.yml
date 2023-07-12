@@ -21,7 +21,7 @@ jobs:
       run: npm ci
       
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run: npx playwright install chromium
       
     - name: Run Playwright tests
       run: npx playwright test --reporter=line,allure-playwright,html
@@ -33,21 +33,21 @@ jobs:
       if: always()
       with:
         name: playwright-report
-        path: output/playwright-report/
+        path: ./output/playwright-report/
         retention-days: 30
         
     - uses: actions/upload-artifact@v3
       if: always()
       with:
         name: allure-report
-        path: output/allure-report/
+        path: ./output/allure-report/
         retention-days: 30
 
     - uses: actions/upload-artifact@v3
       if: always()
       with:
         name: monocart-report
-        path: output/monocart/
+        path: ./output/monocart/
         retention-days: 30
         
     - name: Setup Pages
