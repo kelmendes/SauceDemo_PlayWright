@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
-    "test:reporter": "npx playwright test --reporter=line,allure-playwright",
-    "allure-report": "npx allure generate ./allure-results --clean",
-    "allure-all": "npx allure generate ./allure-results --clean && npx allure open ./allure-report"
+    "test": "playwright test --trace=on",
+    "allure-generate": "npx allure generate ./output/allure-results -o ./output/allure-report --clean",
+    "allure-open": "npx allure open ./output/allure-report"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +14,7 @@
   "devDependencies": {
     "@playwright/test": "^1.31.2",
     "allure-commandline": "^2.21.0",
-    "allure-playwright": "^2.1.0"
+    "allure-playwright": "^2.1.0",
+    "monocart-reporter": "^1.7.4"
   }
 }
