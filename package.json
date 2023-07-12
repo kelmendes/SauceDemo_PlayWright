@@ -15,6 +15,7 @@
   "devDependencies": {
     "@playwright/test": "^1.31.2",
     "allure-commandline": "^2.21.0",
-    "allure-playwright": "^2.1.0"
+    "allure-playwright": "^2.1.0",
+    "monocart-reporter": "^1.7.4"
   }
 }

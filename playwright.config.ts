@@ -32,8 +32,13 @@ export default defineConfig({
     /* reporter: 'html', */
     reporter: [
         ['line'],
-        ['html'],
-        ['allure-playwright', {outputFolder: 'allure-results'}]
+        ['json', {  outputFile: 'output/test-results.json' }],
+        ['html', { outputFolder: 'output/playwright-report'} ],
+        ['allure-playwright', {outputFolder: 'output/allure-results'}],
+        ['monocart-reporter', {  
+            name: "My Test Report",
+            outputFile: './output/monocart/report.html'
+        }]
     ],
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
