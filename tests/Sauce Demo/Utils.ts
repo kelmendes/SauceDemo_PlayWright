@@ -8,3 +8,18 @@ export async function append( page, testInfo){
     // Take the screenshot itself.
     await page.screenshot({ path: screenshotPath, timeout: 5000 });
 }
+
+export async function writeInReport(_reponse) {
+    console.info("Response Head: \n")
+    console.log(_reponse);
+    console.info("\n Response Body: \n")
+    try {  
+        console.log(await _reponse.json());
+    }
+    catch (e: unknown) { 
+        console.info(" null. \n")
+    }
+
+    
+
+}
