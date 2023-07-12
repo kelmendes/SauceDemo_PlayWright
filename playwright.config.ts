@@ -49,29 +49,17 @@ export default defineConfig({
     /* Configure projects for major browsers */
     projects: [
         {
-            name: 'chromium',
+            name : 'BackEnd',
+            testMatch: /.*.api.spec.ts/,
+            retries: 0,
+        },
+        {
+            name: 'EndToEnd',
+            testMatch: /.*.ui.spec.ts/,
             use: { ...devices['Desktop Chrome'] },
         }
 
-        /* Test against mobile viewports. */
-        // {
-        //   name: 'Mobile Chrome',
-        //   use: { ...devices['Pixel 5'] },
-        // },
-        // {
-        //   name: 'Mobile Safari',
-        //   use: { ...devices['iPhone 12'] },
-        // },
-
-        /* Test against branded browsers. */
-        // {
-        //   name: 'Microsoft Edge',
-        //   use: { channel: 'msedge' },
-        // },
-        // {
-        //   name: 'Google Chrome',
-        //   use: { channel: 'chrome' },
-        // },
+       
     ],
 
     /* Folder for test artifacts such as screenshots, videos, traces, etc. */
