@@ -1,18 +1,22 @@
 pipeline {
     agent any
 
+    tools {nodejs "NodeJS"}
+
     stages {
-        stage('Build') {
+        stage('Node Install') {
             steps {
-                nodejs('NodeJS'){
-                    npm install
-                    npm init playwright
-                }
+                sh 'npm install'
+            }
+        }
+        stage('Playwright Install') {
+            steps {
+                sh 'npx playwright install --with-deps'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing....'
             }
         }
         stage('Deploy') {
