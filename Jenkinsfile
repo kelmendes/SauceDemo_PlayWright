@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'WinAgent'}
 
     tools {nodejs "NodeJS"}
 
