@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Playwright Install') {
             steps {
-                sh 'npx playwright install-deps chromium'
+                sh 'npx playwright install --with-deps chromium'
             }
         }
         stage('Test') {
