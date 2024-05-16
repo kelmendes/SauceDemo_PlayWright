@@ -6,7 +6,7 @@ pipeline {
             steps {
                 nodejs('NodeJS'){
                     npm install
-                    npm run prod
+                    npm init playwright
                 }
             }
         }
