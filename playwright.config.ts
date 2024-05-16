@@ -12,9 +12,9 @@ export default defineConfig({
     workers: process.env.CI ? 2 : undefined,
     reporter: [
         ['line'],
-        ['junit', { outputFile: 'output/junit-results.xml' }],
+        ['junit', { outputFile: 'output/junit/result.xml' }],
         ['json', {  outputFile: 'output/test-results.json' }],
-        ['html', { outputFolder: 'output/playwright-report'} ],
+        ['html', { outputFolder: 'output/playwright-report', open: 'never'} ],
         ['allure-playwright', {outputFolder: 'output/allure-results'}],
         ['monocart-reporter', {  
             name: "My Test Report",
