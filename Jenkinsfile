@@ -25,4 +25,10 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'output/monocart/', fingerprint: true
+            junit 'output/test-results.json'
+        }
+    }
 }
