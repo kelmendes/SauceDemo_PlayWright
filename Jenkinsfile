@@ -28,7 +28,7 @@ pipeline {
     post {
         always {
             archiveArtifacts artifacts: 'output/monocart/*', fingerprint: true
-            junit  testResults: 'output/junit-results.xml', skipPublishingChecks: true
+            junit skipPublishingChecks: true, testResults: 'output/junit_*.xml'
         }
     }
 }
