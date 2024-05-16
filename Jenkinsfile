@@ -11,12 +11,12 @@ pipeline {
         }
         stage('Playwright Install') {
             steps {
-                sh 'npx playwright install --with-deps'
+                sh 'npx playwright install-deps chromium'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing....'
+                sh 'npm test'
             }
         }
         stage('Deploy') {
