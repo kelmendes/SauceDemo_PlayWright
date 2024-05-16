@@ -12,6 +12,7 @@ export default defineConfig({
     workers: process.env.CI ? 2 : undefined,
     reporter: [
         ['line'],
+        ['junit', { outputFile: 'output/junit-results.xml' }],
         ['json', {  outputFile: 'output/test-results.json' }],
         ['html', { outputFolder: 'output/playwright-report'} ],
         ['allure-playwright', {outputFolder: 'output/allure-results'}],
