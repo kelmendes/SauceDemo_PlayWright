@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                nodejs('NodeJS'){
+                    npm install
+                    npm run prod
+                }
             }
         }
         stage('Test') {
